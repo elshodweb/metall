@@ -1,0 +1,71 @@
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="news">
+            <h3>Newsletter</h3>
+            <form class="form_news">
+              <input
+                class="newsltter"
+                placeholder="enter your email"
+                type="type"
+                name="enter your email"
+              />
+              <button class="sunm_btn">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-10 offset-md-1">
+          <ul class="conta">
+            <li>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <a href="<%= info.location %>">Locations</a>
+            </li>
+            <li>
+              <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+              <a href="tel:<%= info.phone %>"><%= info.phone %></a>
+            </li>
+            <li>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:<%= info.email %>"><%= info.email %></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-12">
+          <ul class="social_icon">
+            <li>
+              <a href="<%= info.facebook %>"
+                ><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="<%= info.twitter %>"
+                ><i class="fa fa-twitter" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="<%= info.linkedin %>"
+                ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="<%= info.instagram %>"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p><%- info.sertification %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

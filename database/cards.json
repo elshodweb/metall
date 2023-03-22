@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "qozon ",
+    "price": "70000",
+    "description": "5 litrli alyumin qozon. kami bor",
+    "image": "e09857b8-973e-4c98-8631-e9884f4664ea.png",
+    "isDelete": true,
+    "date": "18:17-2.2.2023"
+  },
+  {
+    "id": 2,
+    "name": "qozon ",
+    "price": "70000",
+    "description": "5 litrli alyumin qozon. kami bor",
+    "image": "a09ad616-e5ed-4816-aca9-08779f92f2de.png",
+    "isDelete": true,
+    "date": "18:17-2.2.2023"
+  },
+  {
+    "id": 3,
+    "name": "qozon ",
+    "price": "70000",
+    "description": "5 litrli alyumin qozon. kami bor",
+    "image": "55fb7e42-f4bc-4099-9f99-f8d41e93781d.png",
+    "isDelete": true,
+    "date": "18:17-2.2.2023"
+  },
+  {
+    "id": 4,
+    "name": "choyne",
+    "price": "50000",
+    "description": "3 litrli alyumin choyne. kami bor",
+    "image": "d820606c-9472-4c90-a21c-d9a7e49e7ac2.png",
+    "isDelete": true,
+    "date": "18:17-2.2.2023"
+  },
+  {
+    "id": "5",
+    "name": "qozon 12",
+    "price": "230000",
+    "description": "bu qozon qimatligin i sababi bu oltindan va bu erib ketmaydi bu qozon qimatligin i sababi bu oltindan va bu erib ketmaydi bu qozon qimatligin i sababi bu oltindan va bu erib ketmaydi ",
+    "image": "df8937e8-8325-4ecf-a2c8-8f7bd2ffbad8.png",
+    "isDelete": false,
+    "date": "16:42-3.2.2023"
+  },
+  {
+    "id": 6,
+    "name": "choyne",
+    "price": "50000",
+    "description": "3 litrli alyumin choyne. kami bor",
+    "image": "1d5792a7-3432-42af-bfac-03281d1c4b21.png",
+    "isDelete": true,
+    "date": "18:18-2.2.2023"
+  },
+  {
+    "id": 7,
+    "name": "choyne",
+    "price": "50000",
+    "description": "3 litrli alyumin choyne. kami bor .3 litrli alyumin choyne. kami bor .3 litrli alyumin choyne. kami bor .",
+    "image": "ea7d1b0a-a181-4c2e-8915-7853beb6696f.png",
+    "isDelete": false,
+    "date": "18:18-2.2.2023"
+  },
+  {
+    "id": 8,
+    "name": "alyumin arzon choyne",
+    "price": "50000",
+    "description": "3 litrli alyumin choyne. kami bor .3 litrli alyumin choyne. kami bor .3 litrli alyumin choyne. kami bor .",
+    "image": "e3eb19e7-d923-4ae9-ac67-cb8fdf4b5234.png",
+    "isDelete": false,
+    "date": "18:19-2.2.2023"
+  },
+  {
+    "id": 9,
+    "name": "sadasdasda",
+    "price": "1233",
+    "description": "saaaaaaaaaaaaaaaaaaaaa saaaaaaaaaaaaaaaaaaaaa saaaaaaaaaaaaaaaaaaaaa saaaaaaaaaaaaaaaaaaaaa saaaaaaaaaaaaaaaaaaaaa saaaaaaaaaaaaaaaaaaaaa ",
+    "image": "fe19e1a7-6bfe-4f0a-a938-1a5429fcc63b.png",
+    "isDelete": true,
+    "date": "18:29-2.2.2023"
+  },
+  {
+    "id": 10,
+    "name": "choynak ",
+    "price": "45000",
+    "description": "bu choynak juda zor qaynatadi))) bu choynak juda zor qaynatadi))) bu choynak juda zor qaynatadi))) bu choynak juda zor qaynatadi))) bu choynak juda zor qaynatadi))) bu choynak juda zor qaynatadi))) ",
+    "image": "0bf5b232-4d3b-4b40-9712-ba34f18ed454.png",
+    "isDelete": true,
+    "date": "18:40-2.2.2023"
+  },
+  {
+    "id": 11,
+    "name": "asdasdasda",
+    "price": "2334",
+    "description": "/dashboard/cards/dashboard/cards /dashboard/cards /dashboard/cards /dashboard/cards /dashboard/cards /dashboard/cards /dashboard/cards /dashboard/cards",
+    "image": "b5fa924e-caef-4596-9788-51cccf0bbaed.jpg",
+    "isDelete": true,
+    "date": "18:43-2.2.2023"
+  },
+  {
+    "id": 12,
+    "name": "ssssssssssssssssss",
+    "price": "33333333333333",
+    "description": ".json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() ",
+    "image": "51ac81c1-b60d-4d72-8ad3-d2a322a7f9b7.jpg",
+    "isDelete": true,
+    "date": "11:58-3.2.2023"
+  },
+  {
+    "id": 13,
+    "name": "sdasdasdas",
+    "price": "3244",
+    "description": ".json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() .json().json().json() ",
+    "image": "013e63e2-2ac9-42be-85fe-7b3556fe01c8.jpg",
+    "isDelete": true,
+    "date": "11:58-3.2.2023"
+  },
+  {
+    "id": "14",
+    "name": "daraxtlar ",
+    "price": "50000000",
+    "description": "qewr qwer qwer qwerqewr qwer qwer qwerqewr qwer qwer qwerqewr qwer qwer qwerqewr qwer qwer qwerqewr qwer qwer qwerqewr qwer qwer qwerqewr qwer qwer qwerqewr qwer qwer qwer",
+    "image": "0919b144-e79b-4f4b-93d8-758370fb3f66.jpg",
+    "isDelete": false,
+    "date": "13:43-3.2.2023"
+  }
+]

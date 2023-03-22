@@ -1,0 +1,273 @@
+<% layout("pages/dashboard/loyaut") -%>
+
+<!-- Modal for add -->
+<div
+  class="modal fade"
+  id="addNewCard"
+  tabindex="-1"
+  aria-labelledby="addNewCardLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addNewCardLabel">New Card</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3"
+          method="post"
+          enctype="multipart/form-data"
+          action="/api/cards"
+        >
+          <div class="col-md-12">
+            <label for="validationDefault01" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault01"
+              name="name"
+              value=""
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="validationDefault02" class="form-label">Price</label>
+            <input
+              type="number "
+              class="form-control"
+              id="validationDefault02"
+              name="price"
+              value=""
+              required
+            />
+            <!-- 
+            <div class="invalid-feedback">
+              Please enter a message in the textarea.
+            </div> -->
+          </div>
+
+          <div class="col-md-12">
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label"
+                >Description</label
+              >
+              <!-- class is-invalid -->
+              <textarea
+                class="form-control"
+                id="validationTextarea"
+                placeholder="Description about card"
+                name="description"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                Please enter a message in the textarea.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <input
+                type="file"
+                class="form-control"
+                aria-label="file example"
+                name="image"
+                required
+              />
+              <div class="invalid-feedback">
+                Example invalid form file feedback
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <button class="btn btn-primary" type="submit">
+                Add new Card
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for edit -->
+
+<div
+  class="modal fade"
+  id="editCard"
+  tabindex="-1"
+  aria-labelledby="editCardLabel"
+  aria-hidden="true"
+  style="display: block !important; visibility: hidden; opacity: 0"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editCardLabel">Edit card</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3"
+          id="formEditCard"
+          method="PUT"
+          enctype="multipart/form-data"
+          action="/api/cards"
+        >
+          <div class="col-md-12">
+            <label for="validationDefault01" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault01"
+              name="name"
+              required
+              value=""
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="validationDefault02" class="form-label">Price</label>
+            <input
+              type="number "
+              class="form-control"
+              id="validationDefault02"
+              name="price"
+              required
+              value=""
+            />
+          </div>
+
+          <div class="col-md-12">
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label"
+                >Description</label
+              >
+              <textarea
+                class="form-control"
+                id="validationTextarea"
+                placeholder="Description about card"
+                name="description"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <input
+                type="file"
+                class="form-control"
+                aria-label="file example"
+                name="image"
+              />
+              <div class="invalid-feedback">
+                Example invalid form file feedback
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <button class="btn btn-primary" type="submit">Edit Card</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--main-->
+
+<main>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+        <th scope="col">Date</th>
+        <th scope="col">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#addNewCard"
+          >
+            new card
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach((card,index) => {%>
+      <tr>
+        <th scope="row"><%= index+1 %></th>
+        <td><%= card.name %></td>
+        <td><%= card.price %></td>
+        <td><%= card.description %></td>
+        <td>
+          <img
+            width="200"
+            class="border border-primary"
+            src="../images/<%= card.image %>"
+            alt="#"
+          />
+        </td>
+        <td width="auto"><%= card.date %></td>
+
+        <td class="text-right">
+          <button
+            onclick="removeCard(`<%- card.id %>`)"
+            type="button"
+            class="btn btn-danger mb-2"
+          >
+            remove
+          </button>
+          <button
+            type="button"
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#editCard"
+            onclick="addIdForForm('<%= JSON.stringify(card) %>')"
+          >
+            edit
+          </button>
+        </td>
+      </tr>
+      <%}); %>
+    </tbody>
+  </table>
+</main>
+
+<!-- form scrpit -->
+<script src="../myJs/dashboardCards.js"></script>
