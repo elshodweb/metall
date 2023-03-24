@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "elshod",
+    "email": "elshod@mail.com",
+    "phone": "+9981111111111",
+    "message": "hello what's up",
+    "date": "01:02-5.2.2023",
+    "isCalled": false,
+    "isDelete": true
+  },
+  {
+    "id": 2,
+    "name": "2elshod",
+    "email": "2elshod@mail.com",
+    "phone": "2+9981111111111",
+    "message": "2hello what's up",
+    "date": "02:02-5.2.2023",
+    "isCalled": false,
+    "isDelete": false
+  },
+  {
+    "id": 3,
+    "name": "AZIZBEK ABDUSAMATOV",
+    "email": "elshodtukhtamurodov13@gmail.com",
+    "phone": "123451234",
+    "message": "ыфввыафвы выфа фывафыва фывафыв афывафыв афвыа фыва ыфвыфввыафвы выфа фывафыва фывафыв афывафыв афвыа фыва ыфвыфввыафвы выфа фывафыва фывафыв афывафыв афвыа фыва ыфв",
+    "isColled": false,
+    "isDelete": true,
+    "date": "11:33-5.2.2023"
+  },
+  {
+    "id": 4,
+    "name": "AZIZBEK ABDUSAMATOV",
+    "email": "elshodtukhtamurodov13@gmail.com",
+    "phone": "123451234",
+    "message": "ыфввыафвы выфа фывафыва фывафыв афывафыв афвыа фыва ыфвыфввыафвы выфа фывафыва фывафыв афывафыв афвыа фыва ыфвыфввыафвы выфа фывафыва фывафыв афывафыв афвыа фыва ыфв",
+    "isColled": false,
+    "isDelete": false,
+    "date": "11:34-5.2.2023",
+    "isCalled": false
+  }
+]

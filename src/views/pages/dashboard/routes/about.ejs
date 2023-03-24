@@ -1,2 +1,94 @@
 <% layout("pages/dashboard/loyaut",{active:"about"}) -%>
-<h1>asdfas</h1>
+
+<!-- Modal for add -->
+<div
+  class="modal fade"
+  id="editAbout"
+  tabindex="-1"
+  aria-labelledby="editAboutLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editAboutLabel">Edit About</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3"
+          method="post"
+          enctype="multipart/form-data"
+          action="/api/about"
+        >
+          <div class="col-md-12">
+            <label for="validationDefault01" class="form-label"
+              >Titie ( min=6, max=20 )</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault01"
+              name="title"
+              value="<%= data.title %>"
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label"
+                >Description ( min=100, max=500 )</label
+              >
+              <textarea
+                class="form-control"
+                id="validationTextarea"
+                placeholder="Description about"
+                name="description"
+                rows="10"
+                required
+              >
+<%= data.description %></textarea
+              >
+              <div class="invalid-feedback">
+                Please enter a message in the textarea.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button class="btn btn-primary" type="submit">Edit Hero</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- main -->
+<main class="p-5">
+  <h1 class="h2 mt-5 text-center"><%= data.title %></h1>
+  <p class="h3"><%= data.description %></p>
+  <div class="text-center mt-5">
+    <button
+      type="button"
+      class="btn btn-danger"
+      data-bs-toggle="modal"
+      data-bs-target="#editAbout"
+    >
+      edit hero
+    </button>
+  </div>
+</main>

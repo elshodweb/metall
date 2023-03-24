@@ -1,4 +1,3 @@
-const jwt = require("jsonwebtoken");
 const { v4: uuid } = require("uuid");
 const { resolve, extname } = require("path");
 const joi = require("joi");
@@ -10,6 +9,7 @@ let scheme = joi.object({
   price: joi.number().min(0).required(),
   description: joi.string().min(100).max(1000).required(),
 });
+
 
 const cardsFile = new IO("cards");
 

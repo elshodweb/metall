@@ -7,7 +7,10 @@ function univercalGetController(element) {
       let elementContent = await elementFile.read();
       let id = req?.params?.id;
 
-      if (req.path == "/cards" || req.path == "/cards/" + id) {
+      if (
+        (req.path == "/cards" || req.path == "/cards/" + id) ||
+        req.path == "/hero"||req.path == "/contacts"
+      ) {
         elementContent = elementContent.filter((el) => !el.isDelete);
       }
 

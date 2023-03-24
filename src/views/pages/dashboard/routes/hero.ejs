@@ -1,4 +1,231 @@
-<% layout("pages/dashboard/loyaut",{active:"hero"}) -%>
+<% layout("pages/dashboard/loyaut") -%>
+
+<!-- Modal for add -->
+<div
+  class="modal fade"
+  id="addNewHero"
+  tabindex="-1"
+  aria-labelledby="addNewHeroLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addNewHeroLabel">New Hero</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3"
+          method="post"
+          enctype="multipart/form-data"
+          action="/api/hero"
+        >
+          <div class="col-md-12">
+            <label for="validationDefault01" class="form-label">Titie</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault01"
+              name="title"
+              value=""
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="validationDefault02" class="form-label">Subtitle</label>
+            <input
+              type="number "
+              class="form-control"
+              id="validationDefault02"
+              name="subtitle"
+              value=""
+              required
+            />
+          </div>
+
+          <div class="col-md-12">
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label"
+                >Description</label
+              >
+              <textarea
+                class="form-control"
+                id="validationTextarea"
+                placeholder="Description about card"
+                name="description"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                Please enter a message in the textarea.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <button class="btn btn-primary" type="submit">
+                Add new Hero
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for edit -->
+
+<div
+  class="modal fade"
+  id="editHero"
+  tabindex="-1"
+  aria-labelledby="editHeroLabel"
+  aria-hidden="true"
+  style="display: block !important; visibility: hidden; opacity: 0"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editHeroLabel">Edit hero</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3"
+          id="formEditHero"
+          method="PUT"
+          enctype="multipart/form-data"
+          action="/api/hero"
+        >
+          <div class="col-md-12">
+            <label for="validationDefault01" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationDefault01"
+              name="title"
+              required
+              value=""
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="validationDefault02" class="form-label">Subtitle</label>
+            <input
+              type="number "
+              class="form-control"
+              id="validationDefault02"
+              name="subtitle"
+              required
+              value=""
+            />
+          </div>
+
+          <div class="col-md-12">
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label"
+                >Description</label
+              >
+              <textarea
+                class="form-control"
+                id="validationTextarea"
+                placeholder="Description about card"
+                name="description"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <button class="btn btn-primary" type="submit">Edit Hero</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--main-->
+
 <main>
-  
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Subtitle</th>
+        <th scope="col">Description</th>
+        <th scope="col">Date</th>
+        <th scope="col">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#addNewHero"
+          >
+            new hero
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach((hero,index) => {%>
+      <tr>
+        <th scope="row"><%= index+1 %></th>
+        <td><%= hero.title %></td>
+        <td><%= hero.subtitle %></td>
+        <td><%= hero.description %></td>
+        <td width="auto"><%= hero.date %></td>
+        <td class="text-right">
+          <button
+            onclick="removeHero(`<%- hero.id %>`)"
+            type="button"
+            class="btn btn-danger mb-2"
+          >
+            remove
+          </button>
+          <button
+            type="button"
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#editHero"
+            onclick="addIdForForm('<%= JSON.stringify(hero) %>')"
+          >
+            edit
+          </button>
+        </td>
+      </tr>
+      <%}); %>
+    </tbody>
+  </table>
 </main>
+
+<!-- form scrpit -->
+<script src="../myJs/dashboardHero.js"></script>

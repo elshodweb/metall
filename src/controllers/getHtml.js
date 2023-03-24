@@ -11,7 +11,6 @@ let getHtml = (req, res) => {
       ])
       .then(
         axios.spread((hero, about, cards, info) => {
-          console.log(cards.data);
           res.render("index", {
             hero: hero.data,
             about: about.data,

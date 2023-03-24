@@ -1,2 +1,99 @@
-<% layout("pages/dashboard/loyaut",{active:"info"}) -%>
-<h1>hell users</h1>
+<% layout("pages/dashboard/loyaut") -%>
+
+<!-- Modal for add -->
+<div
+  class="modal fade"
+  id="editInfo"
+  tabindex="-1"
+  aria-labelledby="editInfoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h3" id="editInfoLabel">Edit Info</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="row g-3"
+          method="post"
+          enctype="multipart/form-data"
+          action="/api/info"
+        >
+          <% for (const key in data) {%>
+
+          <div class="col-md-12">
+            <label class="w-100 form-label badge bg-secondary text-light"
+              ><span class="h5"><%= key %></span> : <%
+              if(key=="sertification"){%>
+              <textarea
+                class="form-control"
+                id="validationTextarea"
+                placeholder="Description about card"
+                name="<%= key  %>"
+                rows="6"
+                required
+              >
+<%= data[key]  %></textarea
+              >
+              <%} else{%>
+              <input
+                type="text"
+                class="form-control"
+                id="validationDefault01"
+                name="<%= key %>"
+                value="<%= data[key] %>"
+                required
+              />
+              <%} %>
+            </label>
+          </div>
+          <%} %>
+
+          <div class="col-12">
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button class="btn btn-primary" type="submit">Edit Hero</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- main -->
+<main class="p-5">
+  <h1 class="h2 mt-5 text-center">Info</h1>
+  <ul>
+    <% for (const key in data) {%>
+    <li class="h3">
+      <strong class="badge bg-secondary text-light"><%= key %> : </strong>
+      <span><%= data[key] %></span>
+    </li>
+    <%} %>
+  </ul>
+
+  <div class="text-center mt-5">
+    <button
+      type="button"
+      class="btn btn-danger"
+      data-bs-toggle="modal"
+      data-bs-target="#editInfo"
+    >
+      Edit Hero
+    </button>
+  </div>
+</main>

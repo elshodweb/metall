@@ -2,9 +2,8 @@ let express = require("express");
 let path = require("path");
 let engine = require("ejs-mate");
 let fileUpload = require("express-fileupload");
-const getterRouter = require("./routers/allGetRouter");
-let htmlRouter = require("./routers/htmlRouter");
-const cardsRouter = require("./routers/cardsRouter");
+const routers = require("./routers");
+
 let PORT = 3000;
 let app = express();
 
@@ -18,8 +17,6 @@ app.engine("ejs", engine);
 app.set("view engine", "ejs");
 app.set("views", path.resolve("src", "views"));
 
-app.use(getterRouter);
-app.use(htmlRouter);
-app.use("/api", cardsRouter);
+app.use(routers);
 
 app.listen(PORT, () => console.log("listen to " + PORT));

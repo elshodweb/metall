@@ -1,7 +1,7 @@
-let Axios = require("axios")
+let Axios = require("axios");
 
 const axiosInstanse = Axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: "http://localhost:3000",
 });
 
-module.exports = axiosInstanse
+module.exports = axiosInstanse;

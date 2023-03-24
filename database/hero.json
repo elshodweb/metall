@@ -4,13 +4,21 @@
     "title": "METALS FACTORY",
     "subtitle": "WELCOME",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
+    "date": "18:17-2.2.2023",
     "isDelete": false
   },
   {
-    "id": 2,
-    "title": "2 METALS FACTORY",
+    "id": "2",
+    "title": "METALS FACTOR",
     "subtitle": "WELCOME",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
-    "isDelete": false
+    "date": "10:01-5.2.2023"
+  },
+  {
+    "id": "3",
+    "title": "qalesan",
+    "subtitle": "nima gaplar",
+    "description": "heros heros heros heros herosheros heros heros heros herosheros heros heros ros heros herosheros heros heros heros herosheros heros heros heros herosheros heros heros heros herosheros heros heros heros heros",
+    "date": "11:57-5.2.2023"
   }
 ]
